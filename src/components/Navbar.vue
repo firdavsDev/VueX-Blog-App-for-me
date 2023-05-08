@@ -3,12 +3,23 @@
 
         <nav class="navbar navbar-light bg-light">
 
-            <a class="navbar-brand">Navbar</a>
+            <h1>
+                
+                <RouterLink :to="{name: 'home'}" class="navbar-brand">Blog App</RouterLink>
+            </h1>
 
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <ul class="nav justify-content-end">
+
+                <li class="nav-item m-3">
+                    <router-link to="/">Home</router-link>
+                </li>
+                <li class="nav-item m-3">
+                    <router-link to="/login">Login</router-link>
+                </li>
+                <li class="nav-item m-3">
+                    <RouterLink :to="{name: 'register'}">Register</RouterLink>
+                </li>
+            </ul>
 
         </nav>
         
@@ -20,3 +31,4 @@ export default {
 
 }
 </script>
+// router-link vs RouterLink - https://stackoverflow.com/questions/71725582/difference-between-router-link-and-routerlink-in-vue
